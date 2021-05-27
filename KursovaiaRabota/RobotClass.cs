@@ -241,7 +241,7 @@ namespace WindowsFormsApp1
                 }
                 double value = temp;
                 value = value * (Math.PI / 180);
-                if (value < Math.PI/2)
+                if (value > 0 && value < Math.PI/2)
                 {
                     b = (y - (int)(Math.Tan(value) * x));
                     xT = pictureBox.Width;
@@ -262,8 +262,6 @@ namespace WindowsFormsApp1
                     this.sumDistAndDraw(x, y, xT, yT, pictureBox, graph);
                     x = xT;
                     y = yT;
-
-                    
                 }
                 else if (value > Math.PI/2 && value < Math.PI)
                 {
